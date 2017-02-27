@@ -7,7 +7,7 @@ var requestHandler = function(request, response) {
 	console.log('sending ' + filename)
 	var strm = fs.readFile(filename, (err,contents) => {
 		if (err) {
-			response.statusMessage = "what?! poor you we didn't found yoru file!"
+			response.statusMessage = "what?! poor you we didn't found your file!"
 			response.statusCode = 404
 			response.end()
 		}
