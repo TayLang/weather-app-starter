@@ -63,9 +63,8 @@ var WeatherRouter = Backbone.Router.extend({
 	},
 
 	showCurrentPage: function() {
-		var weatherPromise = $.getJSON('https://api.darksky.net/forecast/f693ad4fa47137321f70f403e91be488/37.8267,-122.4233')
+		var weatherPromise = $.getJSON('https://api.darksky.net/forecast/f693ad4fa47137321f70f403e91be488/37.8267,-122.4233?callback=?')
 		weatherPromise.then(handleCurrentWeatherResponse)
-		renderCurrentHTML()
 	},
 
 	showHourlyPage: function() {
